@@ -1,0 +1,34 @@
+
+// 通用類
+.container{
+    width: 1200px;
+    margin: 0 auto;
+  }
+@each $color, $value in ($color){
+  .bg-#{$color}{
+    background-color: $value;
+  }
+  .text-#{$color}{
+    color: $value;
+  }
+}
+.text-center{
+  text-align: center;
+}
+.d-flex{
+  display: flex;
+}
+.justify-content--center{
+  justify-content: center;
+}
+
+
+.header{
+  background-image: url('../img/photo-1552393700-42696fb89bfa.png');
+  max-width: 100%;
+  background-size: contain;
+  // background-position: center center;
+  background-repeat: no-repeat;
+  height: 960px; 
+  
+}

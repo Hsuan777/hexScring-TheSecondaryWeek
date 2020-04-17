@@ -1,0 +1,38 @@
+// 基礎標籤設定
+* {
+  box-sizing: border-box; 
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;      
+}
+
+body{
+  width: $body__width;
+  margin: 0 auto;
+  font-size: $body__font-size;
+  background-color: $body__background-color;
+  color: $body__color;
+  font-family:  $body__font-family;
+  line-height: $body__line-height;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 106px;
+  
+}
+
+h2 {
+  font-size: 64px;
+  line-height: 84px;
+}
+
+
