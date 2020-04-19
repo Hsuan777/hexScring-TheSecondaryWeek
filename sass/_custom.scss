@@ -35,6 +35,19 @@
 .font-italic {
   font-style: italic;
 }
+.text-mark {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 3px;
+    left: -38px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50px;
+    background-color: map-get($color, secondary);
+  }
+}
 
 .header {
   display: flex;
@@ -42,20 +55,16 @@
   justify-content: center;
   align-items: center;
   padding: 374px 817px 256px 806px;
-  color: white;
   background-image: url("../img/photo-1552393700-42696fb89bfa.png");
   background-size: contain;
-  max-width: 100%;
-  height: 960px;
   background-repeat: no-repeat;
   &__title {
     margin-bottom: 27px;
     position: relative;
-    font-weight: 900;
     &::before {
       position: absolute;
       content: "Here’s";
-      top: -19px;
+      top: -35px;
       left: 8px;
       font-size: 24px;
       line-height: 42px;
@@ -65,60 +74,49 @@
     margin-bottom: 63px;
   }
 }
-.icons {
-  display: flex;
-  &__item {
-    margin-right: 16px;
-  }
-}
 
 .content {
   &__item {
-    padding: 64px 360px 160px 360px;
-    position: relative;
-    &:nth-child(1) {
-      padding-bottom: 56px;
-      .content__item {
+    padding-top: 64px;
+    padding-bottom: 160px;
+  }
+  &__About {
+    padding-bottom: 56px;
+    .content {
+      &__item {
         &__title {
           margin-bottom: 40px;
         }
         &__img {
           margin-bottom: 21px;
         }
-        &__text{
-          line-height: 36px;
+        &__text {
           position: relative;
           margin-bottom: 66px;
           &::after {
             position: absolute;
             content: "";
             bottom: -32px;
-            left: 400px;
-
+            left: 40%;
             width: 384px;
             height: 1px;
             background: black;
           }
-         
         }
-        &__text--mark {
-          position: relative;
-          &::before {
-            position: absolute;
-            content: "";
-            top: 3px;
-            left: -38px;
-            width: 22px;
-            height: 22px;
-            border-radius: 50px;
-            background-color: map-get($color, secondary);
+        &__list{
+          &__item {
+             + .content__item__list__item{
+              margin-top: 32px;
+            }
           }
         }
       }
     }
-    &:nth-child(2) {
-      background-color: black;
-      .content__item {
+  }
+  &__MyBrand {
+    background-color: black;
+    .content {
+      &__item {
         &__title {
           display: flex;
           flex-direction: column;
@@ -131,7 +129,6 @@
         &__text {
           margin-bottom: 48px;
         }
-
         &__img {
           width: 588px;
           &:first-child {
@@ -144,14 +141,37 @@
         }
       }
     }
-    &:nth-child(3) {
-      padding-bottom: 0px;
-      .content__item {
+  }
+  &__Works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .content {
+      &__item {
         &__title {
           margin-bottom: 23px;
         }
         &__text {
           margin-bottom: 48px;
+        }
+      }
+    }
+    &__workGroup {
+      display: flex;
+      flex-wrap: wrap;
+      color: white;
+      + .content__Works__workGroup {
+        margin-top: 58px;
+      }
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        + .content__Works__workGroup__item {
+          margin-left: 24px;
+        }
+        .content__item__img {
+          margin-bottom: 18px;
         }
       }
     }
@@ -161,7 +181,7 @@
 .footer {
   padding: 56px 0 80px 0;
   &__title {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
   }
   &__text {
     margin-bottom: 16px;
@@ -172,30 +192,17 @@
   &__bg {
     background-image: url("../img/photo-1561291386-5be50364cfb5.png");
     background-position: bottom;
+    background-size: auto 1600px;
+    // background-size: contain;
     background-repeat: no-repeat;
   }
-  &__works {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 160px;
-  }
-  &__workGroup {
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    + .custom__workGroup {
-      margin-top: 58px;
-    }
+}
 
-    &__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .content__item__img {
-        margin-bottom: 18px;
-        margin-right: 24px;
-      }
+.icons {
+  display: flex;
+  &__item {
+    + .icons__item {
+      margin-left: 16px;
     }
   }
 }

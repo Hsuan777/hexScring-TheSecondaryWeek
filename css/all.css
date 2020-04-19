@@ -81,12 +81,12 @@ a {
 
 h1 {
   font-size: 80px;
-  line-height: 106px;
+  line-height: 94px;
 }
 
 h2 {
   font-size: 64px;
-  line-height: 84px;
+  line-height: 75px;
   font-weight: 800;
 }
 
@@ -169,6 +169,21 @@ h2 {
   font-style: italic;
 }
 
+.text-mark {
+  position: relative;
+}
+
+.text-mark::before {
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: -38px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50px;
+  background-color: #891818;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,24 +199,20 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   padding: 374px 817px 256px 806px;
-  color: white;
   background-image: url("../img/photo-1552393700-42696fb89bfa.png");
   background-size: contain;
-  max-width: 100%;
-  height: 960px;
   background-repeat: no-repeat;
 }
 
 .header__title {
   margin-bottom: 27px;
   position: relative;
-  font-weight: 900;
 }
 
 .header__title::before {
   position: absolute;
   content: "Here’s";
-  top: -19px;
+  top: -35px;
   left: 8px;
   font-size: 24px;
   line-height: 42px;
@@ -211,69 +222,47 @@ h2 {
   margin-bottom: 63px;
 }
 
-.icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.icons__item {
-  margin-right: 16px;
-}
-
 .content__item {
-  padding: 64px 360px 160px 360px;
-  position: relative;
+  padding-top: 64px;
+  padding-bottom: 160px;
 }
 
-.content__item:nth-child(1) {
+.content__About {
   padding-bottom: 56px;
 }
 
-.content__item:nth-child(1) .content__item__title {
+.content__About .content__item__title {
   margin-bottom: 40px;
 }
 
-.content__item:nth-child(1) .content__item__img {
+.content__About .content__item__img {
   margin-bottom: 21px;
 }
 
-.content__item:nth-child(1) .content__item__text {
-  line-height: 36px;
+.content__About .content__item__text {
   position: relative;
   margin-bottom: 66px;
 }
 
-.content__item:nth-child(1) .content__item__text::after {
+.content__About .content__item__text::after {
   position: absolute;
   content: "";
   bottom: -32px;
-  left: 400px;
+  left: 40%;
   width: 384px;
   height: 1px;
   background: black;
 }
 
-.content__item:nth-child(1) .content__item__text--mark {
-  position: relative;
+.content__About .content__item__list__item + .content__item__list__item {
+  margin-top: 32px;
 }
 
-.content__item:nth-child(1) .content__item__text--mark::before {
-  position: absolute;
-  content: "";
-  top: 3px;
-  left: -38px;
-  width: 22px;
-  height: 22px;
-  border-radius: 50px;
-  background-color: #891818;
-}
-
-.content__item:nth-child(2) {
+.content__MyBrand {
   background-color: black;
 }
 
-.content__item:nth-child(2) .content__item__title {
+.content__MyBrand .content__item__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,83 +276,28 @@ h2 {
   margin-bottom: 12px;
 }
 
-.content__item:nth-child(2) .content__item__title__secondary {
+.content__MyBrand .content__item__title__secondary {
   margin-bottom: 31px;
 }
 
-.content__item:nth-child(2) .content__item__text {
+.content__MyBrand .content__item__text {
   margin-bottom: 48px;
 }
 
-.content__item:nth-child(2) .content__item__img {
+.content__MyBrand .content__item__img {
   width: 588px;
 }
 
-.content__item:nth-child(2) .content__item__img:first-child {
+.content__MyBrand .content__item__img:first-child {
   width: 788px;
   margin-bottom: 40px;
 }
 
-.content__item:nth-child(2) .content__item__img:last-child {
+.content__MyBrand .content__item__img:last-child {
   margin-left: 24px;
 }
 
-.content__item:nth-child(3) {
-  padding-bottom: 0px;
-}
-
-.content__item:nth-child(3) .content__item__title {
-  margin-bottom: 23px;
-}
-
-.content__item:nth-child(3) .content__item__text {
-  margin-bottom: 48px;
-}
-
-.footer {
-  padding: 56px 0 80px 0;
-}
-
-.footer__title {
-  margin-bottom: 15px;
-}
-
-.footer__text {
-  margin-bottom: 16px;
-}
-
-.custom__bg {
-  background-image: url("../img/photo-1561291386-5be50364cfb5.png");
-  background-position: bottom;
-  background-repeat: no-repeat;
-}
-
-.custom__works {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 160px;
-}
-
-.custom__workGroup {
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.custom__workGroup + .custom__workGroup {
-  margin-top: 58px;
-}
-
-.custom__workGroup__item {
+.content__Works {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,8 +310,74 @@ h2 {
           align-items: center;
 }
 
-.custom__workGroup__item .content__item__img {
+.content__Works .content__item__title {
+  margin-bottom: 23px;
+}
+
+.content__Works .content__item__text {
+  margin-bottom: 48px;
+}
+
+.content__Works__workGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: white;
+}
+
+.content__Works__workGroup + .content__Works__workGroup {
+  margin-top: 58px;
+}
+
+.content__Works__workGroup__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content__Works__workGroup__item + .content__Works__workGroup__item {
+  margin-left: 24px;
+}
+
+.content__Works__workGroup__item .content__item__img {
   margin-bottom: 18px;
-  margin-right: 24px;
+}
+
+.footer {
+  padding: 56px 0 80px 0;
+}
+
+.footer__title {
+  margin-bottom: 16px;
+}
+
+.footer__text {
+  margin-bottom: 16px;
+}
+
+.custom__bg {
+  background-image: url("../img/photo-1561291386-5be50364cfb5.png");
+  background-position: bottom;
+  background-size: auto 1600px;
+  background-repeat: no-repeat;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.icons__item + .icons__item {
+  margin-left: 16px;
 }
 /*# sourceMappingURL=all.css.map */
