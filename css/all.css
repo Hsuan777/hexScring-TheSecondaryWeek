@@ -227,24 +227,24 @@ h2 {
   padding-bottom: 160px;
 }
 
-.content__About {
+.content__about {
   padding-bottom: 56px;
 }
 
-.content__About .content__item__title {
+.content__about .content__item__title {
   margin-bottom: 40px;
 }
 
-.content__About .content__item__img {
+.content__about .content__item__img {
   margin-bottom: 21px;
 }
 
-.content__About .content__item__text {
+.content__about .content__item__text {
   position: relative;
   margin-bottom: 66px;
 }
 
-.content__About .content__item__text::after {
+.content__about .content__item__text::after {
   position: absolute;
   content: "";
   bottom: -32px;
@@ -254,15 +254,15 @@ h2 {
   background: black;
 }
 
-.content__About .content__item__list__item + .content__item__list__item {
+.content__about .content__item__list__item + .content__item__list__item {
   margin-top: 32px;
 }
 
-.content__MyBrand {
+.content__myBrand {
   background-color: black;
 }
 
-.content__MyBrand .content__item__title {
+.content__myBrand .content__item__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -276,28 +276,28 @@ h2 {
   margin-bottom: 12px;
 }
 
-.content__MyBrand .content__item__title__secondary {
+.content__myBrand .content__item__title__secondary {
   margin-bottom: 31px;
 }
 
-.content__MyBrand .content__item__text {
+.content__myBrand .content__item__text {
   margin-bottom: 48px;
 }
 
-.content__MyBrand .content__item__img {
+.content__myBrand .content__item__img {
   width: 588px;
 }
 
-.content__MyBrand .content__item__img:first-child {
+.content__myBrand .content__item__img:first-child {
   width: 788px;
   margin-bottom: 40px;
 }
 
-.content__MyBrand .content__item__img:last-child {
+.content__myBrand .content__item__img:last-child {
   margin-left: 24px;
 }
 
-.content__Works {
+.content__works {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -310,15 +310,15 @@ h2 {
           align-items: center;
 }
 
-.content__Works .content__item__title {
+.content__works .content__item__title {
   margin-bottom: 23px;
 }
 
-.content__Works .content__item__text {
+.content__works .content__item__text {
   margin-bottom: 48px;
 }
 
-.content__Works__workGroup {
+.content__works__workGroup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,11 +327,11 @@ h2 {
   color: white;
 }
 
-.content__Works__workGroup + .content__Works__workGroup {
+.content__works__workGroup + .content__Works__workGroup {
   margin-top: 58px;
 }
 
-.content__Works__workGroup__item {
+.content__works__workGroup__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -344,11 +344,11 @@ h2 {
           align-items: center;
 }
 
-.content__Works__workGroup__item + .content__Works__workGroup__item {
+.content__works__workGroup__item + .content__Works__workGroup__item {
   margin-left: 24px;
 }
 
-.content__Works__workGroup__item .content__item__img {
+.content__works__workGroup__item .content__item__img {
   margin-bottom: 18px;
 }
 
