@@ -1,34 +1,201 @@
-
 // 通用類
-.container{
-    width: 1200px;
-    margin: 0 auto;
-  }
-@each $color, $value in ($color){
-  .bg-#{$color}{
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+@each $color, $value in ($color) {
+  .bg-#{$color} {
     background-color: $value;
   }
-  .text-#{$color}{
+  .text-#{$color} {
     color: $value;
   }
 }
-.text-center{
+.text-center {
   text-align: center;
 }
-.d-flex{
+.d-flex {
   display: flex;
 }
-.justify-content--center{
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-direction--column {
+  flex-direction: column;
+}
+.justify-content--center {
   justify-content: center;
 }
+.align-items--center {
+  align-items: center;
+}
+.mx-auto {
+  margin: 0 auto;
+}
+.font-italic {
+  font-style: italic;
+}
 
-
-.header{
-  background-image: url('../img/photo-1552393700-42696fb89bfa.png');
-  max-width: 100%;
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 374px 817px 256px 806px;
+  color: white;
+  background-image: url("../img/photo-1552393700-42696fb89bfa.png");
   background-size: contain;
-  // background-position: center center;
+  max-width: 100%;
+  height: 960px;
   background-repeat: no-repeat;
-  height: 960px; 
-  
+  &__title {
+    margin-bottom: 27px;
+    position: relative;
+    font-weight: 900;
+    &::before {
+      position: absolute;
+      content: "Here’s";
+      top: -19px;
+      left: 8px;
+      font-size: 24px;
+      line-height: 42px;
+    }
+  }
+  &__text {
+    margin-bottom: 63px;
+  }
+}
+.icons {
+  display: flex;
+  &__item {
+    margin-right: 16px;
+  }
+}
+
+.content {
+  &__item {
+    padding: 64px 360px 160px 360px;
+    position: relative;
+    &:nth-child(1) {
+      padding-bottom: 56px;
+      .content__item {
+        &__title {
+          margin-bottom: 40px;
+        }
+        &__img {
+          margin-bottom: 21px;
+        }
+        &__text{
+          line-height: 36px;
+          position: relative;
+          margin-bottom: 66px;
+          &::after {
+            position: absolute;
+            content: "";
+            bottom: -32px;
+            left: 400px;
+
+            width: 384px;
+            height: 1px;
+            background: black;
+          }
+         
+        }
+        &__text--mark {
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            top: 3px;
+            left: -38px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50px;
+            background-color: map-get($color, secondary);
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      background-color: black;
+      .content__item {
+        &__title {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 12px;
+          &__secondary {
+            margin-bottom: 31px;
+          }
+        }
+        &__text {
+          margin-bottom: 48px;
+        }
+
+        &__img {
+          width: 588px;
+          &:first-child {
+            width: 788px;
+            margin-bottom: 40px;
+          }
+          &:last-child {
+            margin-left: 24px;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      padding-bottom: 0px;
+      .content__item {
+        &__title {
+          margin-bottom: 23px;
+        }
+        &__text {
+          margin-bottom: 48px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 56px 0 80px 0;
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__text {
+    margin-bottom: 16px;
+  }
+}
+
+.custom {
+  &__bg {
+    background-image: url("../img/photo-1561291386-5be50364cfb5.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+  &__works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 160px;
+  }
+  &__workGroup {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    + .custom__workGroup {
+      margin-top: 58px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .content__item__img {
+        margin-bottom: 18px;
+        margin-right: 24px;
+      }
+    }
+  }
 }
