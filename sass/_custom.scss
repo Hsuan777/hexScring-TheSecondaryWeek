@@ -160,14 +160,14 @@
       display: flex;
       flex-wrap: wrap;
       color: white;
-      + .content__Works__workGroup {
+      + .content__works__workGroup {
         margin-top: 58px;
       }
       &__item {
         display: flex;
         flex-direction: column;
         align-items: center;
-        + .content__Works__workGroup__item {
+        + .content__works__workGroup__item {
           margin-left: 24px;
         }
         .content__item__img {
