@@ -255,6 +255,16 @@ h2 {
 
 .section__about {
   padding-bottom: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .section__about .inner__title {
@@ -270,7 +280,7 @@ h2 {
   position: absolute;
   content: "";
   bottom: -32px;
-  left: 36%;
+  left: 20px;
   width: 384px;
   height: 1px;
   background: black;

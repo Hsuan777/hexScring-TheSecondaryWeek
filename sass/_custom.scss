@@ -105,11 +105,15 @@
   padding-bottom: 160px;
   &__about {
     padding-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .inner {
       &__title {
         margin-bottom: 40px;
       }
       &__text {
+        // width: 411px;
         position: relative;
         margin-bottom: 66px;
         // TODO:會跑版
@@ -117,7 +121,7 @@
           position: absolute;
           content: "";
           bottom: -32px;
-          left: 36%;
+          left: 20px;
           width: 384px;
           height: 1px;
           background: black;
