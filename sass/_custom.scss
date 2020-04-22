@@ -1,6 +1,6 @@
 // 通用類
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 @each $color, $value in ($color) {
@@ -52,14 +52,36 @@
   }
 }
 
+.custom {
+  &__bg {
+    background-image: url("../img/photo-1561291386-5be50364cfb5.png");
+    background-position: bottom;
+    background-size: auto 1600px;
+    background-repeat: no-repeat;
+  }
+}
+
+.icons {
+  display: flex;
+  &__item {
+    + .icons__item {
+      margin-left: 16px;
+    }
+  }
+}
+
+
 .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 374px 817px 256px 806px;
+  height: 960px;
+  padding-top:384px ;
+  padding-bottom: 256px;
   background-image: url("../img/photo-1552393700-42696fb89bfa.png");
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   &__title {
     margin-bottom: 27px;
@@ -78,64 +100,59 @@
   }
 }
 
-.content {
-  &__item {
-    padding-top: 64px;
-    padding-bottom: 160px;
-  }
+.section {
+  padding-top: 64px;
+  padding-bottom: 160px;
   &__about {
     padding-bottom: 56px;
-    .content {
-      &__item {
-        &__title {
-          margin-bottom: 40px;
+    .inner {
+      &__title {
+        margin-bottom: 40px;
+      }
+      &__text {
+        position: relative;
+        margin-bottom: 66px;
+        // TODO:會跑版
+        &::after {
+          position: absolute;
+          content: "";
+          bottom: -32px;
+          left: 36%;
+          width: 384px;
+          height: 1px;
+          background: black;
         }
-        &__img {
-          margin-bottom: 21px;
-        }
-        &__text {
-          position: relative;
-          margin-bottom: 66px;
-          &::after {
-            position: absolute;
-            content: "";
-            bottom: -32px;
-            left: 40%;
-            width: 384px;
-            height: 1px;
-            background: black;
+      }
+      &__list {
+        &__item {
+          + .inner__list__item {
+            margin-top: 32px;
           }
         }
-        &__list{
-          &__item {
-             + .content__item__list__item{
-              margin-top: 32px;
-            }
-          }
-        }
+      }
+      &__img {
+        margin-bottom: 21px;
       }
     }
   }
   &__myBrand {
     background-color: black;
-    .content {
-      &__item {
-        &__title {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin-bottom: 12px;
-          &__secondary {
-            margin-bottom: 31px;
-          }
+    .inner {
+      &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 12px;
+        &__secondary {
+          margin-bottom: 31px;
         }
-        &__text {
-          margin-bottom: 48px;
-        }
-        &__img {
-          &:first-child {
-            margin-bottom: 40px;
-          }
+      }
+      &__text {
+        margin-bottom: 48px;
+      }
+      &__img {
+        &:first-child {
+          margin-bottom: 40px;
         }
       }
     }
@@ -144,37 +161,36 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    .content {
-      &__item {
-        &__title {
-          margin-bottom: 23px;
-        }
-        &__text {
-          margin-bottom: 48px;
-        }
+    .inner {
+      &__title {
+        margin-bottom: 23px;
       }
-    }
-    &__workGroup {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      color: white;
-      + .content__works__workGroup {
-        margin-top: 58px;
+      &__text {
+        margin-bottom: 48px;
       }
-      &__item {
+      &__img {
+        margin-bottom: 18px;
+      }
+      &__list {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        .content__item__img {
-          margin-bottom: 18px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        color: white;
+        + .inner__list {
+          margin-top: 58px;
+        }
+        &__item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
       }
     }
   }
 }
 
-.footer {
+
+.footer{
   padding: 56px 0 80px 0;
   &__title {
     margin-bottom: 16px;
@@ -184,21 +200,5 @@
   }
 }
 
-.custom {
-  &__bg {
-    background-image: url("../img/photo-1561291386-5be50364cfb5.png");
-    background-position: bottom;
-    background-size: auto 1600px;
-    // background-size: contain;
-    background-repeat: no-repeat;
-  }
-}
 
-.icons {
-  display: flex;
-  &__item {
-    + .icons__item {
-      margin-left: 16px;
-    }
-  }
-}
+

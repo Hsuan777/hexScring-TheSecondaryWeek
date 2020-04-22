@@ -60,7 +60,7 @@ table {
 }
 
 body {
-  width: 1920px;
+  max-width: 100%;
   margin: 0 auto;
   font-size: 24px;
   background-color: #ffffff;
@@ -91,7 +91,7 @@ h2 {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -190,6 +190,23 @@ h2 {
   background-color: #891818;
 }
 
+.custom__bg {
+  background-image: url("../img/photo-1561291386-5be50364cfb5.png");
+  background-position: bottom;
+  background-size: auto 1600px;
+  background-repeat: no-repeat;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.icons__item + .icons__item {
+  margin-left: 16px;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,9 +221,12 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 374px 817px 256px 806px;
+  height: 960px;
+  padding-top: 384px;
+  padding-bottom: 256px;
   background-image: url("../img/photo-1552393700-42696fb89bfa.png");
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -228,47 +248,47 @@ h2 {
   margin-bottom: 63px;
 }
 
-.content__item {
+.section {
   padding-top: 64px;
   padding-bottom: 160px;
 }
 
-.content__about {
+.section__about {
   padding-bottom: 56px;
 }
 
-.content__about .content__item__title {
+.section__about .inner__title {
   margin-bottom: 40px;
 }
 
-.content__about .content__item__img {
-  margin-bottom: 21px;
-}
-
-.content__about .content__item__text {
+.section__about .inner__text {
   position: relative;
   margin-bottom: 66px;
 }
 
-.content__about .content__item__text::after {
+.section__about .inner__text::after {
   position: absolute;
   content: "";
   bottom: -32px;
-  left: 40%;
+  left: 36%;
   width: 384px;
   height: 1px;
   background: black;
 }
 
-.content__about .content__item__list__item + .content__item__list__item {
+.section__about .inner__list__item + .inner__list__item {
   margin-top: 32px;
 }
 
-.content__myBrand {
+.section__about .inner__img {
+  margin-bottom: 21px;
+}
+
+.section__myBrand {
   background-color: black;
 }
 
-.content__myBrand .content__item__title {
+.section__myBrand .inner__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -282,19 +302,19 @@ h2 {
   margin-bottom: 12px;
 }
 
-.content__myBrand .content__item__title__secondary {
+.section__myBrand .inner__title__secondary {
   margin-bottom: 31px;
 }
 
-.content__myBrand .content__item__text {
+.section__myBrand .inner__text {
   margin-bottom: 48px;
 }
 
-.content__myBrand .content__item__img:first-child {
+.section__myBrand .inner__img:first-child {
   margin-bottom: 40px;
 }
 
-.content__works {
+.section__works {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -307,15 +327,19 @@ h2 {
           align-items: center;
 }
 
-.content__works .content__item__title {
+.section__works .inner__title {
   margin-bottom: 23px;
 }
 
-.content__works .content__item__text {
+.section__works .inner__text {
   margin-bottom: 48px;
 }
 
-.content__works__workGroup {
+.section__works .inner__img {
+  margin-bottom: 18px;
+}
+
+.section__works .inner__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,11 +351,11 @@ h2 {
   color: white;
 }
 
-.content__works__workGroup + .content__works__workGroup {
+.section__works .inner__list + .inner__list {
   margin-top: 58px;
 }
 
-.content__works__workGroup__item {
+.section__works .inner__list__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,10 +366,6 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.content__works__workGroup__item .content__item__img {
-  margin-bottom: 18px;
 }
 
 .footer {
@@ -358,22 +378,5 @@ h2 {
 
 .footer__text {
   margin-bottom: 16px;
-}
-
-.custom__bg {
-  background-image: url("../img/photo-1561291386-5be50364cfb5.png");
-  background-position: bottom;
-  background-size: auto 1600px;
-  background-repeat: no-repeat;
-}
-
-.icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.icons__item + .icons__item {
-  margin-left: 16px;
 }
 /*# sourceMappingURL=all.css.map */
