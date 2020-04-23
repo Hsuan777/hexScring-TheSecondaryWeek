@@ -77,8 +77,8 @@
   justify-content: center;
   align-items: center;
   height: 960px;
-  padding-top:384px ;
-  padding-bottom: 256px;
+  // padding-top:384px ;
+  // padding-bottom: 256px;
   background-image: url("../img/photo-1552393700-42696fb89bfa.png");
   background-size: cover;
   background-position: center;
@@ -113,10 +113,8 @@
         margin-bottom: 40px;
       }
       &__text {
-        // width: 411px;
         position: relative;
         margin-bottom: 66px;
-        // TODO:會跑版
         &::after {
           position: absolute;
           content: "";
